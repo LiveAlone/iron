@@ -25,6 +25,11 @@
 
         <!-- 工具类依赖 -->
         <guava.version>33.1.0-jre</guava.version>
+        <hutool.version>5.8.28</hutool.version>
+        <springdoc.version>1.8.0</springdoc.version>
+
+        <!-- 监控相关 -->
+        <skywalking.version>9.2.0</skywalking.version>
     </properties>
 
     <dependencyManagement>
@@ -39,11 +44,30 @@
                 <scope>import</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.springdoc</groupId> <!-- 接口文档 UI：默认 -->
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+
             <!-- 工具类依赖 -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- 监控相关 -->
+
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-trace</artifactId>
+                <version>${skywalking.version}</version>
             </dependency>
 
         </dependencies>

@@ -43,8 +43,9 @@
     <modules>
         <module>dependencies</module>
         <module>empty</module>
-        <module>app</module>
-        <module>web</module>
+<!--        <module>app</module>-->
+<!--        <module>web</module>-->
+        <module>framework</module>
     </modules>
 
     <dependencyManagement>
