@@ -1,0 +1,2 @@
+org.yqj.iron.framework.job.config.YudaoXxlJobAutoConfiguration
+org.yqj.iron.framework.job.config.YudaoAsyncAutoConfiguration

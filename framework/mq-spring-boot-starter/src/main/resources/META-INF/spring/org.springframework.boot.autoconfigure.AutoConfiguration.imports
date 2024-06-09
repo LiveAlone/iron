@@ -1,0 +1,3 @@
+org.yqj.iron.framework.mq.redis.config.YudaoRedisMQProducerAutoConfiguration
+org.yqj.iron.framework.mq.redis.config.YudaoRedisMQConsumerAutoConfiguration
+org.yqj.iron.framework.mq.rabbitmq.config.YudaoRabbitMQAutoConfiguration
