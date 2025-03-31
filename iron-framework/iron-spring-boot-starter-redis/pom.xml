@@ -4,15 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.yqj.iron</groupId>
-        <artifactId>framework</artifactId>
-        <version>${revision}</version>
-    </parent>
-
-    <artifactId>framework-redis-spring-boot-starter</artifactId>
+    <artifactId>iron-spring-boot-starter-reids</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>
+
+    <parent>
+        <groupId>org.yqj.iron</groupId>
+        <artifactId>iron-framework</artifactId>
+        <version>${revision}</version>
+    </parent>
 
     <description> redisson 作为缓存 和 redis 数据持久化 </description>
 
@@ -30,7 +30,7 @@
 
         <dependency>
             <groupId>org.yqj.iron</groupId>
-            <artifactId>framework-common</artifactId>
+            <artifactId>iron-common</artifactId>
         </dependency>
 
         <!-- DB 相关 -->

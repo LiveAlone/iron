@@ -47,7 +47,7 @@
         <dynamic-datasource.version>4.3.0</dynamic-datasource.version>
         <mybatis-plus-join.version>1.4.10</mybatis-plus-join.version>
         <easy-trans.version>2.2.11</easy-trans.version>
-        <redisson.version>3.31.0</redisson.version>
+        <redisson.version>3.45.0</redisson.version>
 
         <!-- 消息队列 -->
         <rocketmq-spring.version>2.3.0</rocketmq-spring.version>
@@ -250,11 +250,11 @@
             </dependency>
 
             <!-- 项目依赖管理 -->
-<!--            <dependency>-->
-<!--                <groupId>org.yqj.iron</groupId>-->
-<!--                <artifactId>framework-common</artifactId>-->
-<!--                <version>${revision}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>org.yqj.iron</groupId>
+                <artifactId>iron-common</artifactId>
+                <version>${revision}</version>
+            </dependency>
 
             <!-- job 依赖相关 -->
             <dependency>
