@@ -11,6 +11,8 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class NoneTest {
+
+
     public void testNone(){
         log.trace("trace log");
         log.debug("debug log");

@@ -23,6 +23,7 @@
         <module>iron-common</module>
         <module>iron-spring-boot-starter-redis</module>
         <module>iron-spring-boot-starter-mybatis</module>
+        <module>iron-spring-boot-starter-test</module>
 <!--        <module>none</module>-->
 <!--        <module>ip</module>-->
 <!--        <module>env-spring-boot-starter</module>-->
