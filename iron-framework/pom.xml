@@ -22,6 +22,7 @@
     <modules>
         <module>iron-common</module>
         <module>iron-spring-boot-starter-redis</module>
+        <module>iron-spring-boot-starter-mybatis</module>
 <!--        <module>none</module>-->
 <!--        <module>ip</module>-->
 <!--        <module>env-spring-boot-starter</module>-->
@@ -30,7 +31,7 @@
 <!--        <module>job-spring-boot-starter</module>-->
 <!--        <module>monitor-spring-boot-starter</module>-->
 <!--        <module>mq-spring-boot-starter</module>-->
-<!--        <module>mybatis-spring-boot-starter</module>-->
+
     </modules>
 
 </project>

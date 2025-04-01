@@ -18,17 +18,19 @@
         <revision>1.0.0-SNAPSHOT</revision>
 
         <!-- plugins -->
-        <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
+        <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
 
         <!-- 统一依赖管理 -->
-        <spring.boot.version>3.2.5</spring.boot.version>
+        <spring.boot.version>3.4.4</spring.boot.version>
         <spring.cloud.version>2023.0.0</spring.cloud.version>
         <spring.cloud.alibaba.version>2023.0.1.0</spring.cloud.alibaba.version>
 
         <!-- 工具类依赖 -->
         <guava.version>33.1.0-jre</guava.version>
         <hutool.version>5.8.28</hutool.version>
-        <springdoc.version>1.8.0</springdoc.version>
+        <springdoc.version>2.7.0</springdoc.version>
+        <knife4j.version>4.6.0</knife4j.version>
+
         <ip2region.version>2.7.0</ip2region.version>
         <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
 
@@ -41,12 +43,13 @@
         <opentracing.version>0.33.0</opentracing.version>
 
         <!-- database 存储相关 -->
-        <druid.version>1.2.21</druid.version>
-        <mybatis-plus.version>3.5.5</mybatis-plus.version>
-        <mybatis-plus-generator.version>3.5.5</mybatis-plus-generator.version>
-        <dynamic-datasource.version>4.3.0</dynamic-datasource.version>
-        <mybatis-plus-join.version>1.4.10</mybatis-plus-join.version>
-        <easy-trans.version>2.2.11</easy-trans.version>
+        <druid.version>1.2.24</druid.version>
+        <mybatis.version>3.5.17</mybatis.version>
+        <mybatis-plus.version>3.5.9</mybatis-plus.version>
+        <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
+        <mybatis-plus-join.version>1.4.13</mybatis-plus-join.version>
+        <easy-trans.version>3.0.6</easy-trans.version>
+
         <redisson.version>3.45.0</redisson.version>
 
         <!-- 消息队列 -->
@@ -84,8 +87,13 @@
 
             <!-- 文档内容依赖 -->
             <dependency>
-                <groupId>org.springdoc</groupId> <!-- 接口文档 UI：默认 -->
-                <artifactId>springdoc-openapi-ui</artifactId>
+                <groupId>com.github.xingfudeshi</groupId> <!-- TODO 芋艿：https://github.com/xiaoymin/knife4j/issues/874 -->
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
                 <version>${springdoc.version}</version>
             </dependency>
 
@@ -182,12 +190,17 @@
                 <version>${redisson.version}</version>
             </dependency>
 
+            <!-- 数据存储database -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-3-starter</artifactId>
                 <version>${druid.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
@@ -195,8 +208,13 @@
             </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-jsqlparser</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-generator</artifactId> <!-- 代码生成器，使用它解析表结构 -->
-                <version>${mybatis-plus-generator.version}</version>
+                <version>${mybatis-plus.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
@@ -208,7 +226,6 @@
                 <artifactId>mybatis-plus-join-boot-starter</artifactId> <!-- MyBatis 联表查询 -->
                 <version>${mybatis-plus-join.version}</version>
             </dependency>
-
 
             <dependency>
                 <groupId>com.fhs-opensource</groupId> <!-- VO 数据翻译 -->

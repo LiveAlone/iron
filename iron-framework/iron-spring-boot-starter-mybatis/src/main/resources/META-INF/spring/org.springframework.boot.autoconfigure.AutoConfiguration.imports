@@ -1,0 +1,3 @@
+org.yqj.iron.framework.datasource.config.YudaoDataSourceAutoConfiguration
+org.yqj.iron.framework.mybatis.config.YudaoMybatisAutoConfiguration
+org.yqj.iron.framework.translate.config.YudaoTranslateAutoConfiguration
