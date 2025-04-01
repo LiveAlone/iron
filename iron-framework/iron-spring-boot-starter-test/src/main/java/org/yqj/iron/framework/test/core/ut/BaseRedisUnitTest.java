@@ -1,7 +1,7 @@
 package org.yqj.iron.framework.test.core.ut;
 
 import cn.hutool.extra.spring.SpringUtil;
-import org.redisson.spring.starter.RedissonAutoConfiguration;
+import org.redisson.spring.starter.RedissonAutoConfigurationV2;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
@@ -23,9 +23,9 @@ public class BaseRedisUnitTest {
     @Import({
             // Redis 配置类
             RedisTestConfiguration.class, // Redis 测试配置类，用于启动 RedisServer
-            RedisAutoConfiguration.class, // Spring Redis 自动配置类
             YudaoRedisAutoConfiguration.class, // 自己的 Redis 配置类
-            RedissonAutoConfiguration.class, // Redisson 自动配置类
+            RedisAutoConfiguration.class, // Spring Redis 自动配置类，注意顺序
+            RedissonAutoConfigurationV2.class, // Redisson 自动配置类
 
             // 其它配置类
             SpringUtil.class
