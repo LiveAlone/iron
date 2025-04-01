@@ -31,6 +31,7 @@ public class DefaultDBFieldHandler implements MetaObjectHandler {
                 baseDO.setUpdateTime(current);
             }
 
+            // todo yqj setting creator/updater
 //            Long userId = WebFrameworkUtils.getLoginUserId();
 //            // 当前登录用户不为空，创建人为空，则当前登录用户为创建人
 //            if (Objects.nonNull(userId) && Objects.isNull(baseDO.getCreator())) {

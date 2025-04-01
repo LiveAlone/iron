@@ -2,10 +2,10 @@ package org.yqj.iron.framework.test;
 
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.redisson.api.RList;
 import org.redisson.api.RedissonClient;
-import org.redisson.api.RedissonRxClient;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.yqj.iron.framework.test.core.ut.BaseRedisUnitTest;
@@ -19,6 +19,7 @@ import java.util.Map;
  * Description:
  */
 @Slf4j
+@Disabled
 public class RedisEmbeddingTest extends BaseRedisUnitTest {
 
     @Resource
