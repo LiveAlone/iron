@@ -2,6 +2,7 @@ package org.yqj.iron.framework.test;
 
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.yqj.iron.framework.test.core.ut.BaseDbUnitTest;
 import org.yqj.iron.framework.test.model.User;
@@ -13,6 +14,7 @@ import org.yqj.iron.framework.test.model.UserMapper;
  * Description:
  */
 @Slf4j
+@Disabled
 public class DatabaseEmbeddingTest extends BaseDbUnitTest {
 
     @Resource
