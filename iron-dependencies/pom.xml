@@ -46,7 +46,7 @@
 
         <!-- 监控相关 -->
         <skywalking.version>9.2.0</skywalking.version>
-        <spring-boot-admin.version>3.2.1</spring-boot-admin.version>
+        <spring-boot-admin.version>3.4.1</spring-boot-admin.version>
         <opentracing.version>0.33.0</opentracing.version>
 
         <!-- database 存储相关 -->
@@ -147,11 +147,6 @@
             </dependency>
 
             <!-- 监控相关 -->
-            <!--            <dependency>-->
-            <!--                <groupId>cn.iocoder.cloud</groupId>-->
-            <!--                <artifactId>yudao-spring-boot-starter-monitor</artifactId>-->
-            <!--                <version>${revision}</version>-->
-            <!--            </dependency>-->
             <dependency>
                 <groupId>org.apache.skywalking</groupId>
                 <artifactId>apm-toolkit-trace</artifactId>
@@ -193,16 +188,23 @@
                 <version>${opentracing.version}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>de.codecentric</groupId>-->
-<!--                <artifactId>spring-boot-admin-starter-server</artifactId> &lt;!&ndash; 实现 Spring Boot Admin Server 服务端 &ndash;&gt;-->
-<!--                <version>${spring-boot-admin.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId> <!-- 实现 Spring Boot Admin Server 服务端 -->
+                <version>${spring-boot-admin.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>de.codecentric</groupId>
+                        <artifactId>spring-boot-admin-server-cloud</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
             <dependency>
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-client</artifactId> <!-- 实现 Spring Boot Admin Server 服务端 -->
                 <version>${spring-boot-admin.version}</version>
             </dependency>
+
 
             <!-- database 存储相关 -->
             <dependency>
@@ -355,7 +357,6 @@
     </dependencyManagement>
 
     <build>
-
         <plugins>
             <!-- 统一 revision 版本 -->
             <plugin>
