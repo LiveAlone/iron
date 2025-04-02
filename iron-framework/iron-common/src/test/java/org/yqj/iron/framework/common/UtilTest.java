@@ -4,9 +4,8 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
-import org.checkerframework.checker.units.qual.C;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.yqj.iron.framework.common.util.cache.CacheUtils;
 import org.yqj.iron.framework.common.util.json.JsonUtils;
 import org.yqj.iron.framework.common.util.spring.SpringExpressionUtils;
@@ -21,7 +20,7 @@ import java.util.Map;
  * Description:
  */
 @Slf4j
-@Ignore
+@Disabled
 public class UtilTest {
 
     @Test

@@ -19,7 +19,6 @@ import java.util.function.Function;
 import static org.yqj.iron.framework.common.util.collection.CollectionUtils.convertList;
 import static org.yqj.iron.framework.common.util.collection.CollectionUtils.findFirst;
 
-
 /**
  * 区域工具类
  *

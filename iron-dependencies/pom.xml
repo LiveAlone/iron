@@ -27,7 +27,9 @@
 
         <!-- 工具类依赖 -->
         <guava.version>33.1.0-jre</guava.version>
-        <hutool.version>5.8.28</hutool.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
+        <hutool-5.version>5.8.35</hutool-5.version>
+        <hutool-6.version>6.0.0-M19</hutool-6.version>
         <springdoc.version>2.7.0</springdoc.version>
         <knife4j.version>4.6.0</knife4j.version>
 
@@ -58,7 +60,7 @@
         <redisson.version>3.45.0</redisson.version>
 
         <!-- 消息队列 -->
-        <rocketmq-spring.version>2.3.2</rocketmq-spring.version>
+        <rocketmq-spring.version>2.3.3</rocketmq-spring.version>
 
     </properties>
 
@@ -109,9 +111,29 @@
                 <version>${guava.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId> <!-- use mapstruct-jdk8 for Java 8 or higher -->
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-jdk8</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
-                <version>${hutool.version}</version>
+                <version>${hutool-5.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dromara.hutool</groupId>
+                <artifactId>hutool-extra</artifactId>
+                <version>${hutool-6.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.lionsoul</groupId>

@@ -4,22 +4,28 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>framework-ip</artifactId>
+    <artifactId>iron-spring-boot-starter-biz-ip</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>
 
     <parent>
         <groupId>org.yqj.iron</groupId>
-        <artifactId>framework</artifactId>
+        <artifactId>iron-framework</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <description>ip 地址区域解析</description>
+    <description>
+        IP 拓展，支持如下功能：
+        1. IP 功能：查询 IP 对应的城市信息
+        基于 https://gitee.com/lionsoul/ip2region 实现
+        2. 城市功能：查询城市编码对应的城市信息
+        基于 https://github.com/modood/Administrative-divisions-of-China 实现
+    </description>
 
     <dependencies>
         <dependency>
             <groupId>org.yqj.iron</groupId>
-            <artifactId>framework-common</artifactId>
+            <artifactId>iron-common</artifactId>
         </dependency>
 
         <!-- logger -->
@@ -36,8 +42,8 @@
 
         <!-- 工具相关 -->
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
+            <groupId>org.lionsoul</groupId>
+            <artifactId>ip2region</artifactId>
         </dependency>
 
         <dependency>
@@ -45,9 +51,11 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!-- Test 测试相关 -->
         <dependency>
-            <groupId>org.lionsoul</groupId>
-            <artifactId>ip2region</artifactId>
+            <groupId>org.yqj.iron</groupId>
+            <artifactId>iron-spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

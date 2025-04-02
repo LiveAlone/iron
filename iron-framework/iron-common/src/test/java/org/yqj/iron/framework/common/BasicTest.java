@@ -1,8 +1,8 @@
 package org.yqj.iron.framework.common;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.yqj.iron.framework.common.enums.DateIntervalEnum;
 import org.yqj.iron.framework.common.exception.enums.GlobalErrorCodeConstants;
 import org.yqj.iron.framework.common.exception.util.ServiceExceptionUtil;
@@ -13,7 +13,7 @@ import org.yqj.iron.framework.common.exception.util.ServiceExceptionUtil;
  * Description:
  */
 @Slf4j
-@Ignore
+@Disabled
 public class BasicTest {
 
     @Test
