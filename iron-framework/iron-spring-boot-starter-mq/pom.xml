@@ -16,6 +16,7 @@
 
     <description>
         消息队列，支持 Redis、RocketMQ、RabbitMQ、Kafka 四种
+        redis 1 支持Pub/Sub 实时通知发布订阅模式。 2 支持Stream 消息队列模式
     </description>
 
     <dependencies>
