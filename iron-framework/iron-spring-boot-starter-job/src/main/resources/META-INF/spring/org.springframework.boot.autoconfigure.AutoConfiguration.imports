@@ -1,0 +1,2 @@
+org.yqj.iron.framework.quartz.config.YudaoQuartzAutoConfiguration
+org.yqj.iron.framework.quartz.config.YudaoAsyncAutoConfiguration

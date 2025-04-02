@@ -25,12 +25,12 @@
         <module>iron-spring-boot-starter-mybatis</module>
         <module>iron-spring-boot-starter-test</module>
         <module>iron-spring-boot-starter-mq</module>
+        <module>iron-spring-boot-starter-job</module>
 <!--        <module>none</module>-->
 <!--        <module>ip</module>-->
 <!--        <module>env-spring-boot-starter</module>-->
 <!--        <module>rpc-spring-boot-starter</module>-->
 <!--        <module>web-spring-boot-starter</module>-->
-<!--        <module>job-spring-boot-starter</module>-->
 <!--        <module>monitor-spring-boot-starter</module>-->
 
     </modules>
