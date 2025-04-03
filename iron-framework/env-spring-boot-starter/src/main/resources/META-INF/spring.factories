@@ -1,2 +1,0 @@
-org.springframework.boot.env.EnvironmentPostProcessor=\
-    org.yqj.iron.framework.env.config.EnvEnvironmentPostProcessor
