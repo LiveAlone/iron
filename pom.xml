@@ -20,7 +20,7 @@
         <project.encoding>UTF-8</project.encoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>17</java.version>
+        <java.version>23</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
@@ -37,6 +37,11 @@
     <modules>
         <module>iron-dependencies</module>
         <module>iron-framework</module>
+        <module>iron-module-infra</module>
+        <module>iron-module-system</module>
+
+<!--        <module>none-module</module>-->
+
 <!--        <module>empty</module>-->
 <!--        <module>app</module>-->
 <!--        <module>web</module>-->
