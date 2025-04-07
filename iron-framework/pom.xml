@@ -23,19 +23,23 @@
         <module>iron-common</module>
         <module>iron-spring-boot-starter-redis</module>
         <module>iron-spring-boot-starter-mybatis</module>
-        <module>iron-spring-boot-starter-test</module>
         <module>iron-spring-boot-starter-mq</module>
-        <module>iron-spring-boot-starter-job</module>
-        <module>iron-spring-boot-starter-monitor</module>
         <module>iron-spring-boot-starter-web</module>
         <module>iron-spring-boot-starter-security</module>
+        <module>iron-spring-boot-starter-websocket</module>
+
+        <module>iron-spring-boot-starter-monitor</module>
+        <module>iron-spring-boot-starter-protection</module>
+
+        <module>iron-spring-boot-starter-test</module>
+
+        <module>iron-spring-boot-starter-job</module>
+        <module>iron-spring-boot-starter-excel</module>
+
         <module>iron-spring-boot-starter-biz-ip</module>
         <module>iron-spring-boot-starter-biz-data-permission</module>
         <module>iron-spring-boot-starter-biz-tenant</module>
 
-<!--        <module>env-spring-boot-starter</module>-->
-<!--        <module>rpc-spring-boot-starter</module>-->
-<!--        <module>web-spring-boot-starter</module>-->
 
     </modules>
 

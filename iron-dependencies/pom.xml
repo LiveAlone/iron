@@ -36,6 +36,7 @@
         <ip2region.version>2.7.0</ip2region.version>
         <jsoup.version>1.18.3</jsoup.version>
         <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
+        <easyexcel.version>4.0.3</easyexcel.version>
 
         <!-- Job 定时任务相关 -->
         <xxl-job.version>2.4.0</xxl-job.version>
@@ -44,6 +45,9 @@
         <podam.version>8.0.2.RELEASE</podam.version>
         <jedis-mock.version>1.1.8</jedis-mock.version>
         <mockito-inline.version>5.2.0</mockito-inline.version>
+
+        <!-- 服务保障相关 -->
+        <lock4j.version>2.2.7</lock4j.version>
 
         <!-- 监控相关 -->
         <skywalking.version>9.2.0</skywalking.version>
@@ -63,6 +67,9 @@
         <!-- 消息队列 -->
         <rocketmq-spring.version>2.3.3</rocketmq-spring.version>
 
+        <!-- 三方云服务 -->
+        <commons-io.version>2.17.0</commons-io.version>
+        <commons-compress.version>1.27.1</commons-compress.version>
     </properties>
 
     <dependencyManagement>
@@ -159,6 +166,34 @@
                     <exclusion> <!-- 排除掉springboot依赖使用项目的 -->
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-starter</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>${commons-compress.version}</version>
+            </dependency>
+
+            <!-- 服务保障相关 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>lock4j-redisson-spring-boot-starter</artifactId>
+                <version>${lock4j.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>redisson-spring-boot-starter</artifactId>
+                        <groupId>org.redisson</groupId>
                     </exclusion>
                 </exclusions>
             </dependency>
@@ -384,7 +419,16 @@
                 <artifactId>iron-spring-boot-starter-security</artifactId>
                 <version>${revision}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.yqj.iron</groupId>
+                <artifactId>iron-spring-boot-starter-biz-ip</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.yqj.iron</groupId>
+                <artifactId>iron-spring-boot-starter-biz-tenant</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <dependency>
                 <groupId>org.yqj.iron</groupId>
                 <artifactId>iron-module-infra-api</artifactId>
