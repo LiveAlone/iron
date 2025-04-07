@@ -1,0 +1,3 @@
+org.yqj.iron.framework.security.config.YudaoSecurityAutoConfiguration
+org.yqj.iron.framework.security.config.YudaoWebSecurityConfigurerAdapter
+org.yqj.iron.framework.operatelog.config.YudaoOperateLogConfiguration

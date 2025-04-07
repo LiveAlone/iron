@@ -29,6 +29,7 @@
         <module>iron-spring-boot-starter-biz-ip</module>
         <module>iron-spring-boot-starter-monitor</module>
         <module>iron-spring-boot-starter-web</module>
+        <module>iron-spring-boot-starter-security</module>
 
 <!--        <module>env-spring-boot-starter</module>-->
 <!--        <module>rpc-spring-boot-starter</module>-->
