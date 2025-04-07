@@ -23,6 +23,7 @@
 
     <modules>
         <module>iron-module-infra-api</module>
+        <module>iron-module-infra-biz</module>
     </modules>
 
 </project>

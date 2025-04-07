@@ -26,6 +26,7 @@
         <spring.cloud.alibaba.version>2023.0.1.0</spring.cloud.alibaba.version>
 
         <!-- 工具类依赖 -->
+        <captcha-plus.version>2.0.3</captcha-plus.version>
         <guava.version>33.1.0-jre</guava.version>
         <mapstruct.version>1.6.3</mapstruct.version>
         <hutool-5.version>5.8.35</hutool-5.version>
@@ -37,6 +38,17 @@
         <jsoup.version>1.18.3</jsoup.version>
         <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
         <easyexcel.version>4.0.3</easyexcel.version>
+        <velocity.version>2.4.1</velocity.version>
+        <commons-net.version>3.11.1</commons-net.version>
+        <jsch.version>0.1.55</jsch.version>
+        <tika-core.version>3.1.0</tika-core.version>
+
+        <!-- 三方云服务 -->
+        <commons-io.version>2.17.0</commons-io.version>
+        <commons-compress.version>1.27.1</commons-compress.version>
+        <aws-java-sdk-s3.version>1.12.777</aws-java-sdk-s3.version>
+        <justauth.version>2.0.5</justauth.version>
+        <weixin-java.version>4.7.2.B</weixin-java.version>
 
         <!-- Job 定时任务相关 -->
         <xxl-job.version>2.4.0</xxl-job.version>
@@ -67,9 +79,6 @@
         <!-- 消息队列 -->
         <rocketmq-spring.version>2.3.3</rocketmq-spring.version>
 
-        <!-- 三方云服务 -->
-        <commons-io.version>2.17.0</commons-io.version>
-        <commons-compress.version>1.27.1</commons-compress.version>
     </properties>
 
     <dependencyManagement>
@@ -183,6 +192,66 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-compress</artifactId>
                 <version>${commons-compress.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId> <!-- 解决 ftp 连接 -->
+                <version>${commons-net.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch</artifactId> <!-- 解决 sftp 连接 -->
+                <version>${jsch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-core</artifactId> <!-- 文件类型的识别 -->
+                <version>${tika-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xingyuv</groupId>
+                <artifactId>spring-boot-starter-captcha-plus</artifactId>
+                <version>${captcha-plus.version}</version>
+            </dependency>
+
+            <!-- 三方云相关 -->
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-s3</artifactId>
+                <version>${aws-java-sdk-s3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xingyuv</groupId>
+                <artifactId>spring-boot-starter-justauth</artifactId> <!-- 社交登陆（例如说，个人微信、企业微信等等） -->
+                <version>${justauth.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>cn.hutool</groupId>
+                        <artifactId>hutool-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-pay</artifactId>
+                <version>${weixin-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>wx-java-mp-spring-boot-starter</artifactId>
+                <version>${weixin-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>wx-java-miniapp-spring-boot-starter</artifactId>
+                <version>${weixin-java.version}</version>
             </dependency>
 
             <!-- 服务保障相关 -->
@@ -411,7 +480,17 @@
             </dependency>
             <dependency>
                 <groupId>org.yqj.iron</groupId>
+                <artifactId>iron-spring-boot-starter-excel</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.yqj.iron</groupId>
                 <artifactId>iron-spring-boot-starter-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.yqj.iron</groupId>
+                <artifactId>iron-spring-boot-starter-websocket</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
@@ -427,6 +506,16 @@
             <dependency>
                 <groupId>org.yqj.iron</groupId>
                 <artifactId>iron-spring-boot-starter-biz-tenant</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.yqj.iron</groupId>
+                <artifactId>iron-spring-boot-starter-monitor</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.yqj.iron</groupId>
+                <artifactId>iron-spring-boot-starter-biz-data-permission</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>

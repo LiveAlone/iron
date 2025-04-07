@@ -22,6 +22,7 @@
 
     <modules>
         <module>iron-module-system-api</module>
+        <module>iron-module-system-biz</module>
     </modules>
 
 </project>

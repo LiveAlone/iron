@@ -1,4 +1,4 @@
-package org.yqj.iron.module.none;
+package org.yqj.iron.module.infra;
 
 import com.google.common.collect.ImmutableList;
 import lombok.extern.slf4j.Slf4j;
