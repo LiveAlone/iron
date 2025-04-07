@@ -3,6 +3,7 @@ package org.yqj.iron.framework.mybatis.core.handler;
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;
 import org.yqj.iron.framework.mybatis.core.dataobject.BaseDO;
+import org.yqj.iron.framework.web.core.util.WebFrameworkUtils;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -31,16 +32,15 @@ public class DefaultDBFieldHandler implements MetaObjectHandler {
                 baseDO.setUpdateTime(current);
             }
 
-            // todo yqj setting creator/updater
-//            Long userId = WebFrameworkUtils.getLoginUserId();
-//            // 当前登录用户不为空，创建人为空，则当前登录用户为创建人
-//            if (Objects.nonNull(userId) && Objects.isNull(baseDO.getCreator())) {
-//                baseDO.setCreator(userId.toString());
-//            }
-//            // 当前登录用户不为空，更新人为空，则当前登录用户为更新人
-//            if (Objects.nonNull(userId) && Objects.isNull(baseDO.getUpdater())) {
-//                baseDO.setUpdater(userId.toString());
-//            }
+            Long userId = WebFrameworkUtils.getLoginUserId();
+            // 当前登录用户不为空，创建人为空，则当前登录用户为创建人
+            if (Objects.nonNull(userId) && Objects.isNull(baseDO.getCreator())) {
+                baseDO.setCreator(userId.toString());
+            }
+            // 当前登录用户不为空，更新人为空，则当前登录用户为更新人
+            if (Objects.nonNull(userId) && Objects.isNull(baseDO.getUpdater())) {
+                baseDO.setUpdater(userId.toString());
+            }
         }
     }
 
@@ -54,9 +54,9 @@ public class DefaultDBFieldHandler implements MetaObjectHandler {
 
         // 当前登录用户不为空，更新人为空，则当前登录用户为更新人
         Object modifier = getFieldValByName("updater", metaObject);
-//        Long userId = WebFrameworkUtils.getLoginUserId();
-//        if (Objects.nonNull(userId) && Objects.isNull(modifier)) {
-//            setFieldValByName("updater", userId.toString(), metaObject);
-//        }
+        Long userId = WebFrameworkUtils.getLoginUserId();
+        if (Objects.nonNull(userId) && Objects.isNull(modifier)) {
+            setFieldValByName("updater", userId.toString(), metaObject);
+        }
     }
 }

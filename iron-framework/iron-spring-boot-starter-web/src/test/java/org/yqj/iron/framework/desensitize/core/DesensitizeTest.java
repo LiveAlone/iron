@@ -1,5 +1,6 @@
 package org.yqj.iron.framework.desensitize.core;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Disabled;
 import org.yqj.iron.framework.desensitize.core.annotation.Address;
 import org.yqj.iron.framework.desensitize.core.regex.annotation.EmailDesensitize;
@@ -19,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  */
 @ExtendWith(MockitoExtension.class)
 @Disabled
+@Slf4j
 public class DesensitizeTest {
 
     @Test
@@ -42,6 +44,7 @@ public class DesensitizeTest {
 
         // 调用
         DesensitizeDemo d = JsonUtils.parseObject(JsonUtils.toJsonString(desensitizeDemo), DesensitizeDemo.class);
+        log.info(JsonUtils.toJsonString(d));
         // 断言
         assertNotNull(d);
         assertEquals("芋***", d.getNickname());

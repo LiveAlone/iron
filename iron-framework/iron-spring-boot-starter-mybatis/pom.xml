@@ -32,6 +32,10 @@
             <groupId>org.yqj.iron</groupId>
             <artifactId>iron-common</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.yqj.iron</groupId>
+            <artifactId>iron-spring-boot-starter-web</artifactId>
+        </dependency>
 
         <!-- DB 相关 -->
         <dependency>

@@ -1,0 +1,6 @@
+org.yqj.iron.framework.apilog.config.YudaoApiLogAutoConfiguration
+org.yqj.iron.framework.jackson.config.YudaoJacksonAutoConfiguration
+org.yqj.iron.framework.swagger.config.YudaoSwaggerAutoConfiguration
+org.yqj.iron.framework.web.config.YudaoWebAutoConfiguration
+org.yqj.iron.framework.xss.config.YudaoXssAutoConfiguration
+org.yqj.iron.framework.banner.config.YudaoBannerAutoConfiguration

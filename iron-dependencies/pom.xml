@@ -358,6 +358,11 @@
                 <artifactId>iron-spring-boot-starter-mq</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>org.yqj.iron</groupId>
+                <artifactId>iron-spring-boot-starter-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.yqj.iron</groupId>
