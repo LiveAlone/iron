@@ -40,11 +40,9 @@
         <module>iron-module-infra</module>
         <module>iron-module-system</module>
 
+        <module>iron-server</module>
 <!--        <module>none-module</module>-->
 
-<!--        <module>empty</module>-->
-<!--        <module>app</module>-->
-<!--        <module>web</module>-->
 
     </modules>
 
